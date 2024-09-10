@@ -1,0 +1,14 @@
+services:
+  prometheus:
+    image: prom/prometheus:latest
+    ports:
+      - 9090:9090
+    volumes:
+      - ./prometheus.yaml:/etc/prometheus
+    networks:
+      caddy-network:
+
+networks:
+  caddy-network:
+    name: caddy-network
+    external: true

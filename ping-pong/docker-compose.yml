@@ -1,0 +1,12 @@
+services:
+  ping-pong:
+    container_name: ping-pong
+    build: ./ping-pong/.
+    restart: always
+    networks:
+      caddy-network:
+
+networks:
+  caddy-network:
+    name: caddy-network
+    external: true

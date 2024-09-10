@@ -1,0 +1,13 @@
+{
+        log caddylogger {
+                output file /home/azureuser/log {
+                        roll_size 2MiB
+                }
+        }
+        servers {
+                metrics
+        }
+}
+<cname>.rajivharlalka.in {
+  reverse_proxy /* ping-pong:8000
+}
